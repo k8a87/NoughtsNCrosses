@@ -1,0 +1,101 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  background: rgb(124, 45, 150);
+  background: linear-gradient(
+    90deg,
+    rgba(124, 45, 150, 1) 0%,
+    rgba(67, 45, 74, 1) 100%
+  );
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.bg--winner {
+  background-color: #51ff00;
+}
+.bg--circle {
+  background-color: #4b6ffe;
+}
+.bg--cross {
+  background-color: #ea0cfa;
+}
+.bg--grid {
+  background-color: #00ffff;
+}
+
+.container {
+  max-width: 80vw;
+  margin: auto;
+}
+
+.score {
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  background-color: rgba(0, 255, 255, 0.358);
+  border-radius: 2rem;
+}
+
+.score-x {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.game {
+  row-gap: 1rem;
+  column-gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+
+.grid {
+  width: 11vw;
+  height: 11vw;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.grid:hover {
+  opacity: 80%;
+}
+
+.iconStyle {
+  position: absolute;
+  font-size: 9vw;
+}
+
+.reset {
+  text-align: center;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 10rem;
+  background-color: #51ff00;
+  cursor: pointer;
+}
+.reset:hover {
+  background-color: #00ffff;
+}
+.container-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
