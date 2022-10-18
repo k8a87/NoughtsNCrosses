@@ -26,7 +26,7 @@ h1 {
 .bg--cross {
   background-color: #ea0cfa;
 }
-.bg--grid {
+.bg--square {
   background-color: #00ffff;
 }
 
@@ -34,21 +34,9 @@ h1 {
   max-width: 80vw;
   margin: auto;
 }
-
-.score {
-  color: rgb(255, 255, 255);
-  padding: 1rem;
-  background-color: rgba(0, 255, 255, 0.358);
-  border-radius: 2rem;
-}
-
-.score-x {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .row {
   display: flex;
+  flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: space-evenly;
@@ -64,9 +52,22 @@ h1 {
   justify-content: center;
 }
 
-.grid {
-  width: 11vw;
-  height: 11vw;
+.scores {
+  display: flex;
+  justify-content: space-around;
+  font-size: smaller;
+}
+
+.score {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 255, 255, 0.358);
+  border-radius: 2rem;
+  margin: 5px;
+  padding: 5px;
+}
+.square {
+  width: 25vw;
+  height: 25vw;
   display: grid;
   text-align: center;
   align-items: center;
@@ -75,7 +76,8 @@ h1 {
   border-radius: 1rem;
   cursor: pointer;
 }
-.grid:hover {
+
+.square:hover {
   opacity: 80%;
 }
 
@@ -98,4 +100,28 @@ h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .row {
+    flex-direction: row;
+  }
+  .square {
+    width: 12vw;
+    height: 12vw;
+  }
+  .scores {
+    flex-direction: column;
+  }
+  .score-x {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .square {
+    width: 10vw;
+    height: 10vw;
+  }
 }
